@@ -1,0 +1,123 @@
+@import url(https://fonts.google.com/specimen/League+Spartan);
+*, *::before, *::after {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+:root {
+    --m-space: 20px;
+    --border-r: 10px;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: hsl(222, 26%, 31%);
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.calculator-box {
+    color: #fff;
+}
+.calculator-box .theme {
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: var(--m-space);
+}
+.calculator-box .output {
+    min-height: 100px;
+    background-color: hsl(224, 36%, 15%);
+    margin-block: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    border-radius: var(--border-r);
+    padding: var(--m-space);
+}
+h1 {
+    margin: 0;
+}
+.calculator-box .output .pervious-output {
+    font-size: 1.5em;
+    opacity: 0.75;
+}
+.calculator-box .output .current-output {
+    font-size: 2.5em;
+}
+.toggle-container {
+    align-items: flex-end;
+    gap: var(--m-space);
+}
+.toggle-container label {
+    padding-inline: 5px;
+}
+.toggle-container .bar {
+    background-color: hsl(224, 36%, 15%);
+    padding-inline: 5px;
+    border-radius: 20px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+}
+.toggle-container .bar input {
+    cursor: pointer;
+    opacity: 0;
+}
+.toggle-container .ball {
+    width: 15px;
+    height: 15px;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background-color: hsl(6, 63%, 50%);
+}
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    justify-content: center;
+    align-items: center;
+    padding: var(--m-space);
+    border-radius: var(--border-r);
+    gap: var(--m-space);
+    background-color: hsl(223, 31%, 20%);
+}
+.keys .span-two {
+    grid-column: span 2;
+}
+.keys button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: hsl(30, 25%, 89%);
+    box-shadow: 0 5px 0 0 hsl(28, 16%, 65%);
+    padding: 10px;
+    font-size: 32px;
+    color: hsl(221, 14%, 31%);
+    border-radius: 10px;
+}
+.keys button:hover {
+    opacity: 0.6;
+}
+.keys .delete, .keys .reset {
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0 5px 0 0 hsl(224, 28%, 35%);
+    color: #fff;
+}
+.keys .equals {
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0 5px 0 0 hsl(6, 70%, 34%);
+    color: #fff;
+}

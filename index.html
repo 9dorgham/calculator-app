@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="./master.css">
+  <script src="./main.js" defer></script>
+</head>
+<body class="flex-center">
+
+  <div class="calculator-box">
+    <div class="theme flex-center">
+      <h1>calc</h1> 
+      <div class="flex-center toggle-container">
+        <span>THEME</span>  
+        <div>
+          <label for="theme-one">1</label>
+          <label for="theme-two">2</label>
+          <label for="theme-there">3</label>
+          <div class="bar">
+            <input type="checkbox" name="" id="theme-one" data-theme="theme-one">
+            <input type="checkbox" name="" id="theme-two" data-theme="theme-two">
+            <input type="checkbox" name="" id="theme-there" data-theme="theme-there">
+            <span class="ball"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="output">
+      <div class="pervious-output" data-previous-operand></div>
+      <div class="current-output" data-current-operand></div>
+    </div>
+    <div class="keys">
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button class="delete" data-delete>DEL</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operation>+</button>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operation>-</button>
+      <button data-number>.</button>
+      <button data-number>0</button>
+      <button data-operation>/</button>
+      <button data-operation>*</button>
+      <button class="span-two reset" data-reset>RESET</button>
+      <button class="span-two equals" data-equals>=</button>
+    </div>
+  </div>
+
+</body>
+</html>
