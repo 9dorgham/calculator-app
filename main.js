@@ -144,3 +144,22 @@ deleteButton.addEventListener('click', () => {
     calculator.delete()
     calculator.updatedisplay()
 })
+
+
+
+
+
+// change-Theme
+
+let bodyElement = document.getElementsByTagName('body')[0]
+let themeButtons = document.querySelectorAll('.bar input')
+
+
+themeButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        let oldTheme = bodyElement.classList[1];
+        let newTheme = btn.value;
+        bodyElement.classList.remove(oldTheme)
+        bodyElement.classList.add(newTheme)
+    })
+})
